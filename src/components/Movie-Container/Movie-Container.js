@@ -8,6 +8,7 @@ const MovieContainer = ({ movies }) => {
     return (
       <MovieCard
         key={movie.id}
+        id={movie.id}
         poster={movie.poster_path}
       />
    )
