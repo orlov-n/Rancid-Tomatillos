@@ -5,11 +5,14 @@ class MovieCard extends Component {
   constructor() {
     super();
     this.state = {
-      selectedMovie: false
+      selectedMovie: false,
+      currentMovie: {},
     }
   }
   getSelectedMovie = (event) => {
     console.log(event.target.id)
+    this.setState({currentMovie: event.target})
+    console.log(this.state.currentMovie)
   }
   render() {
 
