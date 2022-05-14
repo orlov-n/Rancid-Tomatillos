@@ -2,7 +2,7 @@ import React from 'react'
 import MovieCard from '../Movie-Card/Movie-Card'
 import './Movie-Container.css'
 
-const MovieContainer = ({ movies }) => {
+const MovieContainer = ({ movies, handleClick }) => {
 
   const movieInfo = movies.map(movie => {
     return (
@@ -11,6 +11,7 @@ const MovieContainer = ({ movies }) => {
         id={movie.id}
         poster={movie.poster_path}
         movie={movie}
+        handleClick={handleClick}
       />
    )
   })

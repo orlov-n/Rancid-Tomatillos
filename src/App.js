@@ -6,9 +6,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: []
+      movies: [],
+      movieSummary: false,
+      selectedMovie: ''
     }
   }
+
+   handleClick = (movie) => {
+    this.setState({movieSummary: true, selectedMovie: movie})
+  }
+
   componentDidMount = () => {
     this.setState({ movies: movieData.movies })
   }
@@ -17,10 +24,10 @@ class App extends Component {
     return (
       <main className='Movie-Home-Page'>
         <h1>Rancid Tomatillos</h1>
-        <MovieContainer movies={this.state.movies} />
+        <MovieContainer handleClick={this.handleClick} movies={this.state.movies} />
       </main>
 
-
+      // use turinary
     )
   }
 }
