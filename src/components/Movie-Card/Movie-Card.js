@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Movie-Card.css'
+import SelectedMovie from '../Selected-Movie/SelectedMovie';
 
 class MovieCard extends Component {
   constructor() {
@@ -14,6 +15,8 @@ class MovieCard extends Component {
     this.setState({currentMovie: event.target})
     console.log(this.state.currentMovie)
   }
+
+
   render() {
 
     return (
