@@ -1,11 +1,10 @@
 import React from 'react'
 import MovieCard from '../Movie-Card/Movie-Card'
 
-const SelectedMovie = (prop) => {
-  console.log(prop)
+const SelectedMovie = ({selectedMovie}) => {
   return (
     <div>
-      {prop}
+      <img src={selectedMovie.poster_path}></img>
     </div>
   )
 }
