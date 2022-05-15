@@ -17,6 +17,12 @@ const SelectedMovie = ({selectedMovie}) => {
             <li>movie name: {selectedMovie.title}</li>
             <li>movie rating: {selectedMovie.average_rating.toFixed(2)}</li>
             <li>release date: {selectedMovie.release_date}</li>
+            {selectedMovie.budget ? <li>budget: {selectedMovie.budget}</li> : '' }
+            {selectedMovie.budget ? <li>revenue: {selectedMovie.revenue}</li> : '' }
+            <li>genre: {selectedMovie.genres.join(', ')}</li>
+            <li>runtime: {selectedMovie.runtime}</li>
+            {selectedMovie.tagline ? <li>tagline: {selectedMovie.tagline}</li> : ''}
+            <li>overview: {selectedMovie.overview}</li>
           </ul>
         </div>
       </article>
