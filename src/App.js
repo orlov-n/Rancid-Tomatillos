@@ -27,7 +27,7 @@ class App extends Component {
 
 
   componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/2/movies').then((data) => {
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies').then((data) => {
       if(data.ok) {
         return data.json()
       } else {
