@@ -24,11 +24,24 @@ class App extends Component {
     goHome = () => {
       this.setState({ movieSummary: false, selectedMovie: '' })
     }
+
+
   componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-    .then(data => data.json())
-    .then(data => this.setState({ movies: data.movies}))
-  }
+    fetch('https://rancid-tomatillos.herokuapp.com/api/2/movies').then((data) => {
+      if(data.ok) {
+        return data.json()
+      } else {
+        throw Error(data.error)
+      }
+    })
+    .then((response) => {
+
+      this.setState({movies: response.movies, selectedMovie: '', movieSummary: false})
+    })
+    .catch((err) => {
+      console.log(err)
+      })
+    }
 
   render() {
     const activeError = this.state.error

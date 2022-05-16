@@ -25,15 +25,40 @@
   height: 44vh;
   width: 14vw;
   border-radius: 1vh;
-  margin-right: 0;
-  /* opacity: 0.6; */
+  margin-right: 7vh;
+  margin-left: 4.5vh;
 
 }
 
+.movie-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 60vw;
+}
+.title {
+  color: white;
+  font-size: 4vh;
+
+}
+.tagline {
+  color:white;
+  font-size: 2.5vh;
+  font-style: italic;
+}
+
+.overview {
+  color: white;
+  font-size: 2.7vh;
+  margin-top: 0;
+}
+.overview > p {
+  margin-top: 0;
+}
 .info-list {
   font-size: 22pt;
   color: white;
   list-style: none;
   margin-left: 0;
-
 }
