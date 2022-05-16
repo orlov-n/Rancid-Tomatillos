@@ -11,13 +11,25 @@ const SelectedMovie = ({selectedMovie}) => {
 
         <div className="poster-container">
           <img className="poster-2" src={selectedMovie.poster_path}></img>
-        </div>
-        <div className="movie-info-container">
           <ul className="info-list">
-            <li>movie name: {selectedMovie.title}</li>
             <li>movie rating: {selectedMovie.average_rating.toFixed(2)}</li>
             <li>release date: {selectedMovie.release_date}</li>
+            {selectedMovie.budget ? <li>budget: ${selectedMovie.budget}</li> : '' }
+            {selectedMovie.budget ? <li>revenue: ${selectedMovie.revenue}</li> : '' }
+            <li>genre: {selectedMovie.genres.join(', ')}</li>
+            <li>runtime: {selectedMovie.runtime} minutes</li>
           </ul>
+        </div>
+        <div className="movie-info-container">
+        <div className='title'>
+        <h2>{selectedMovie.title}</h2>
+        </div>
+          <div className="tagline">
+            {selectedMovie.tagline ? <h2>"{selectedMovie.tagline}"</h2> : ''}
+          </div>
+          <div className="overview">
+            <p>{selectedMovie.overview}</p>
+          </div>
         </div>
       </article>
 
