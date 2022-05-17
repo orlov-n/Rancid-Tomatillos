@@ -21,15 +21,19 @@ const SelectedMovie = ({selectedMovie}) => {
           </ul>
         </div>
         <div className="movie-info-container">
-        <div className='title'>
-        <h2>{selectedMovie.title}</h2>
-          <div className="tagline">
-            {selectedMovie.tagline ? <h2>"{selectedMovie.tagline}"</h2> : ''}
+          <div className='title'>
+          <h2>{selectedMovie.title}</h2>
+            <div className="tagline">
+              <div className="tagline-text">
+              {selectedMovie.tagline ? <h2>"{selectedMovie.tagline}"</h2> : ''}
+                </div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/5iDik4y2VvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
           </div>
-        </div>
-          <div className="overview">
-            <p>{selectedMovie.overview}</p>
-          </div>
+            <div className="overview">
+              <p>{selectedMovie.overview}</p>
+            </div>
         </div>
       </article>
 
