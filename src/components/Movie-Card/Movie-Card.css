@@ -1,4 +1,20 @@
 .poster{
   height: 33vh;
+  width: 10vw;
+  border: solid black 3px;
+  /* box-shadow: 15px 15px 8px rgb(3, 2, 2); */
+}
+
+.movie-card-title {
+  width: 9vw;
+  margin: 0;
+  color: white;
+  margin-left: 5px;
+}
+
+.movie-card {
+  margin-bottom: 1vh;
+  height: 41vh;
   width: 11vw;
+  
 }

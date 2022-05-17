@@ -23,10 +23,10 @@ const SelectedMovie = ({selectedMovie}) => {
         <div className="movie-info-container">
         <div className='title'>
         <h2>{selectedMovie.title}</h2>
-        </div>
           <div className="tagline">
             {selectedMovie.tagline ? <h2>"{selectedMovie.tagline}"</h2> : ''}
           </div>
+        </div>
           <div className="overview">
             <p>{selectedMovie.overview}</p>
           </div>

@@ -1,6 +1,4 @@
-*{
-  border: red solid 1px;
-}
+
 .selected-movie-page {
   background-size: cover;
   display: flex;
