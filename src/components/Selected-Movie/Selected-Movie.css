@@ -9,19 +9,26 @@
   height: 100vh;
 }
 
+.movie-year {
+  font-size: 3vh;
+  /* margin: 0; */
+  display: inline-block;
+  color: #c2c2c2;
+
+}
+
 .poster-info-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background-color: rgba(000, 0, 0, 0.7);
   height:100vh;
-  width: 100vw;
+  width: 76vw;
 
 }
 
 .poster-2 {
-  height: 44vh;
-  width: 14vw;
+  height: 66vh;
+  width: 20vw;
   border-radius: 1vh;
   margin-right: 7vh;
   margin-left: 4.5vh;
@@ -29,32 +36,55 @@
 }
 
 .poster-container {
+  display: flex;
   width: 33vw;
   margin-right: 0;
+  height: 97vh;
+  justify-content: flex start;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 2vh;
 }
 
 .movie-info-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  width: 60vw;
+  height: 72vh;
+  width: 38vw;
 }
 .title {
   color: white;
   font-size: 4vh;
+  margin: 0;
 
 }
+
+.title >h2 {
+  color: white;
+  font-size: 6vh;
+  margin: 0;
+  height: 21vh;
+
+}
+
 .tagline {
   color:white;
   font-size: 2.5vh;
   font-style: italic;
-  height: 66vh;
+  height: 50vh;
+  margin: 0;
 }
 
 .tagline-text {
-  height: 44vh;
+  height: 12vh;
+  margin: 0;
 }
+.tagline-text > h2 {
+  margin: 0;
+  height: 12vh;
+}
+
 .overview {
   color: white;
   font-size: 2.7vh;
@@ -68,4 +98,6 @@
   color: white;
   list-style: none;
   margin-left: 0;
+  width: 42vh;
+  margin-right: 5vh
 }

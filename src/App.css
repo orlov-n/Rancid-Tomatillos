@@ -1,9 +1,17 @@
-*{
+/* *{
   border: red solid 1px;
-}
+} */
 
 .App {
   text-align: center;
+}
+
+html {
+  height: 33%;
+}
+
+body {
+height: 33%;
 }
 
 main {
@@ -17,7 +25,6 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-   height: 12vh;
+   height: 8vh;
     width: 100vw;
-    border: red solid 1px;
   }
