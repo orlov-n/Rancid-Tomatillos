@@ -1,19 +1,19 @@
 .poster{
   height: 33vh;
-  width: 10vw;
+  width: 10.3vw;
   border: solid black 3px;
   /* box-shadow: 15px 15px 8px rgb(3, 2, 2); */
-  transition-duration: 2s
+  /* transition-duration: 2s */
 
 }
 
 
-.poster:hover {
+/* .poster:hover {
   cursor: pointer;
   transform: scale(1.04);
   transform: rotate(1080deg);
   transition: all ease-in-out .01s;
-}
+} */
 
 .movie-card-title {
   width: 9vw;
