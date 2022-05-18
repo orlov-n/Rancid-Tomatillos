@@ -48,12 +48,12 @@ class App extends Component {
     const movieSummary = this.state.movieSummary
     return (
 
-      <main className='Movie-Home-Page'>
+      <main className='Movie-Home-Page' alignToTop="true">
         <nav className="nav">
           <button onClick={() => this.goHome()}>HOME</button>
           <h1>Rancid Tomatillos</h1>
         </nav>
-        {movieSummary ? <SelectedMovie selectedMovie={this.state.selectedMovie} /> : <MovieContainer handleClick={this.handleClick} movies={this.state.movies} /> }
+        {movieSummary ? <SelectedMovie alignToTop={true} selectedMovie={this.state.selectedMovie} /> : <MovieContainer handleClick={this.handleClick} movies={this.state.movies} /> }
       </main>
     )
   }
