@@ -7,15 +7,17 @@ const MovieContainer = ({ movies, handleClick }) => {
 
   const movieInfo = movies.map(movie => {
     return (
-      <NavLink to={`/movies/${movie.id}`}>
-      <MovieCard
-        key={movie.id}
-        id={movie.id}
-        poster={movie.poster_path}
-        movie={movie}
-        handleClick={handleClick}
-      />
-      </NavLink>
+      <div key={movie.id}>
+
+        <NavLink to={`/movies/${movie.id}`}>
+        <MovieCard
+          id={movie.id}
+          poster={movie.poster_path}
+          movie={movie}
+          handleClick={handleClick}
+        />
+        </NavLink>
+      </div>
    )
   })
   return (

@@ -28,10 +28,11 @@
 
 .poster-2 {
   height: 66vh;
-  width: 20vw;
-  border-radius: 1vh;
+  width: 22vw;
+  /* border-radius: 1vh; */
   margin-right: 7vh;
   margin-left: 4.5vh;
+  border: 2px black solid;
 
 }
 

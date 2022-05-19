@@ -4,7 +4,7 @@ import MovieContainer from './components/Movie-Container/Movie-Container'
 import SelectedMovie from './components/Selected-Movie/Selected-Movie';
 import Error from './components/Error/Error'
 import './App.css'
-import { Route, NavLink } from 'react-router-dom'
+import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
 class App extends Component {
   constructor() {
     super();
@@ -12,7 +12,7 @@ class App extends Component {
       movies: [],
       movieSummary: false,
       selectedMovie: '',
-      error: ''
+      error: null
     }
   }
 
@@ -47,7 +47,6 @@ class App extends Component {
   render() {
     const activeError = this.state.error
     const movieSummary = this.state.movieSummary
-    console.log('hi')
     return (
 
       <main className='Movie-Home-Page'>
@@ -57,14 +56,27 @@ class App extends Component {
           </NavLink>
           <h1>Rancid Tomatillos</h1>
         </nav>
-        <Route exact path="/" render={()=> <MovieContainer handleClick={this.handleClick} movies={this.state.movies}/>}/>
-        <Route path="/movie/:id" render={({ match }) => 
+        <Switch>
+          
+          <Route exact path="/" render={ () => <MovieContainer handleClick={this.handleClick} movies={this.state.movies}/> } />
+          
+          <Route exact path="/movie/:id" render={ () => <SelectedMovie selectedMovie={this.state.selectedMovie}/>} />
+        
+          <Redirect to='/' />
+
+        </Switch>
+        
+        {/* {<Route path="/movie/:id" render={({ match }) => 
           console.log(match)
-        } />
-        {movieSummary ? <SelectedMovie alignToTop={true} selectedMovie={this.state.selectedMovie} /> : "" }
+        } />} */}
+        {movieSummary ? <SelectedMovie alignToTop={true} selectedMovie={this.state.selectedMovie} /> : ""} 
+        
+
       </main>
     )
   }
 }
 
 export default App;
+
+
