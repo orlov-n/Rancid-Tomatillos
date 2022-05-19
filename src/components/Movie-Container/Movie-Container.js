@@ -9,12 +9,11 @@ const MovieContainer = ({ movies, handleClick }) => {
     return (
       <div key={movie.id}>
 
-        <NavLink to={`/movies/${movie.id}`}>
+        <NavLink to={`/${movie.id}`}>
         <MovieCard
           id={movie.id}
           poster={movie.poster_path}
           movie={movie}
-          handleClick={handleClick}
         />
         </NavLink>
       </div>
