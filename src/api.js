@@ -1,4 +1,4 @@
-export const getMovieGallery = fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies/turing')
+export const getMovieGallery = fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies/')
 
 export const getSelectedMovie = (movie) => {
 return  fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${movie}`)
