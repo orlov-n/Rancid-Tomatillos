@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MovieCard from '../Movie-Card/Movie-Card'
 import './Selected-Movie.css'
+import { getSelectedMovie, getMovieTrailer } from '../../api'
 
 class SelectedMovie extends Component{
   constructor(props) {
@@ -12,18 +13,11 @@ class SelectedMovie extends Component{
   }
 
   componentDidMount = () => {
-    const getMovieData = () =>{
-      fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.selectedMovie}`)
-      .then(data => data.json())
-      .then(data => this.setState({selectedMovie: data.movie}))
-    }
-    const getTrailers = () => {
-      fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.selectedMovie}/videos`)
-      .then(data => data.json())
-      .then(data => this.setState({movieTrailers: data.videos}))
-    }
-    getMovieData()
-    getTrailers()
+    getSelectedMovie(this.props.selectedMovie)
+     .then(data => this.setState({selectedMovie: data.movie}))
+
+    getMovieTrailer(this.props.selectedMovie)
+     .then(data => this.setState({movieTrailers: data.videos}))
 
  }
 

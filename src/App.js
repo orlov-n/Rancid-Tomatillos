@@ -5,6 +5,7 @@ import SelectedMovie from './components/Selected-Movie/Selected-Movie';
 import Error from './components/Error/Error';
 import './App.css';
 import { Route, Redirect, NavLink, Switch } from 'react-router-dom';
+import { getMovieGallery } from './api'
 class App extends Component {
   constructor() {
     super();
@@ -16,7 +17,7 @@ class App extends Component {
   };
 
   componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies').then((data) => {
+      getMovieGallery.then((data) => {
       if(data.ok) {
         return data.json()
       } else {
@@ -33,7 +34,7 @@ class App extends Component {
     }
 
   render() {
-    const activeError = this.state.error
+
     return (
       <main className='Movie-Home-Page'>
         <nav className="nav">
@@ -43,7 +44,7 @@ class App extends Component {
           <h1>Rancid Tomatillos</h1>
         </nav>
           <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies}/> } />
-          <Route exact path="/:id" render={ ({ match }) => { 
+          <Route exact path="/:id" render={ ({ match }) => {
             return <SelectedMovie selectedMovie={match.params.id}/>
           }} />
       </main>
@@ -52,6 +53,5 @@ class App extends Component {
   }
 }
 
+
 export default App;
-
-
