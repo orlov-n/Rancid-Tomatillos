@@ -1,20 +1,28 @@
 import React, { Component } from 'react'
 import MovieCard from '../Movie-Card/Movie-Card'
 import './Selected-Movie.css'
+import { getSelectedMovie, getMovieTrailer } from '../../api'
 
 class SelectedMovie extends Component{
   constructor(props) {
     super(props);
-    this.state = {selectedMovie: ''}
+    this.state = {
+      selectedMovie: '',
+      movieTrailers: ''
+    }
   }
 
   componentDidMount = () => {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.selectedMovie}`)
-    .then(data => data.json())
-    .then(data => this.setState({selectedMovie: data.movie}))
+    getSelectedMovie(this.props.selectedMovie)
+     .then(data => this.setState({selectedMovie: data.movie}))
+
+    getMovieTrailer(this.props.selectedMovie)
+     .then(data => this.setState({movieTrailers: data.videos}))
+
  }
 
  render() {
+
   return (
     <section className="selected-movie-page" style={{
       backgroundImage: `url(${this.state.selectedMovie.backdrop_path})`
@@ -34,12 +42,12 @@ class SelectedMovie extends Component{
         <div className="movie-info-container">
           <div className='title'>
           <h2>{this.state.selectedMovie.title}  <p className="movie-year">({this.state.selectedMovie.release_date})</p></h2>
-          
+
             <div className="tagline">
               <div className="tagline-text">
               {this.state.selectedMovie.tagline ? <h2>"{this.state.selectedMovie.tagline}"</h2> : ''}
                 </div>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/5iDik4y2VvE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <iframe width="560" height="315" src={this.state.movieTrailers ? `https://www.youtube.com/embed/${this.state.movieTrailers[0].key}` : '' } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
             </div>
           </div>
