@@ -13,6 +13,7 @@ class App extends Component {
     super();
     this.state = {
       movies: [],
+      searchBarValue: '',
       movieSearch: [],
       selectedMovie: '',
       error: null
@@ -37,20 +38,24 @@ class App extends Component {
     }
 
     handleSearch = (event) => {
-    this.setState({movieSearch: this.state.movies.filter(movie => {
+    this.setState({ searchBarValue: event.target.value })
+    this.setState({ movieSearch: this.state.movies.filter(movie => {
       return movie.title.toUpperCase().includes(event.target.value.toUpperCase())
     })})
+  }
+
+  resetSearchValue = () => {
+    this.setState({ searchBarValue: '' })
   }
 
 
 
   render() {
-    console.log(this.state.movies)
 
     return (
         <main className='Movie-Home-Page'>
-          <SearchBar handleSearch={this.handleSearch} />
-          <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies}/> } />
+          <SearchBar handleSearch={this.handleSearch} searchBarValue={ this.searchBarValue } resetSearchValue={ this.resetSearchValue }/>
+          <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies} searchBarValue={ this.state.searchBarValue } movieSearch={ this.state.movieSearch }/> } />
           <Route exact path="/:id" render={ ({ match }) => {
             return <SelectedMovie selectedMovie={match.params.id}/>
           }} />
