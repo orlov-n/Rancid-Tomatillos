@@ -1,8 +1,9 @@
 describe('Selected Movie', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/694919');
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919', { fixture: 'money-plane'});
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919/videos', { fixture: 'money-plane-trailer'})
+    cy.visit('http://localhost:3000/694919');
+
   })
 
   it('should have Money Plane information', () => {
