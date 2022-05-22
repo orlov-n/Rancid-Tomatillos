@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <main className='Movie-Home-Page'>
         <nav className="nav">
-          <NavLink to="/">
+          <NavLink to="/" style={{color: 'white'}}>
           <button>HOME</button>
           </NavLink>
           <h1>Rancid Tomatillos</h1>
