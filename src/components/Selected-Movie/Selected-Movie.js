@@ -22,7 +22,8 @@ class SelectedMovie extends Component{
  }
 
  render() {
-
+  let date;
+  this.state.selectedMovie.release_date ? date = this.state.selectedMovie.release_date.slice(0, 4) : date = ''
   return (
     <section className="selected-movie-page" style={{
       backgroundImage: `url(${this.state.selectedMovie.backdrop_path})`
@@ -32,7 +33,7 @@ class SelectedMovie extends Component{
         <div className="poster-container">
           <img className="poster-2" src={this.state.selectedMovie.poster_path}></img>
           <ul className="info-list">
-            <li>movie rating: {this.state.selectedMovie.average_rating}</li>
+            <li>movie rating: {(Math.round(this.state.selectedMovie.average_rating * 10) / 10)}</li>
             {this.state.selectedMovie.budget ? <li>budget: ${this.state.selectedMovie.budget}</li> : '' }
             {this.state.selectedMovie.budget ? <li>revenue: ${this.state.selectedMovie.revenue}</li> : '' }
             <li>genre: {this.state.selectedMovie.genres}</li>
@@ -41,7 +42,7 @@ class SelectedMovie extends Component{
         </div>
         <div className="movie-info-container">
           <div className='title'>
-          <h2>{this.state.selectedMovie.title}  <p className="movie-year">({this.state.selectedMovie.release_date})</p></h2>
+          <h2>{this.state.selectedMovie.title} <p className="movie-year">({date})</p></h2> 
 
             <div className="tagline">
               <div className="tagline-text">

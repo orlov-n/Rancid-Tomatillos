@@ -35,6 +35,7 @@ const MovieContainer = ({ movies, handleClick, movieSearch, searchBarValue, hide
           hideInput={hideInput}
         />
         </NavLink>
+        <p className="movie-card-title">{movie.title} ({movie.release_date.slice(0, 4)})</p>
       </div>
    )
   })
