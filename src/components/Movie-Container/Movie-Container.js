@@ -16,6 +16,7 @@ const MovieContainer = ({ movies, handleClick }) => {
           movie={movie}
         />
         </NavLink>
+        <p className="movie-card-title">{movie.title} ({movie.release_date.slice(0, 4)})</p>
       </div>
    )
   })
