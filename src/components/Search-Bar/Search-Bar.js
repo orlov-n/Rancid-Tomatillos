@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const SearchBar = ({ handleSearch, searchBarValue, resetSearchValue }) => {
-
+  let searchValue = ''
   return (
     <nav className="nav">
       <h1>Rancid Tomatillos</h1>

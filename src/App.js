@@ -54,7 +54,7 @@ class App extends Component {
 
     return (
         <main className='Movie-Home-Page'>
-          <SearchBar handleSearch={this.handleSearch} searchBarValue={ this.searchBarValue } resetSearchValue={ this.resetSearchValue }/>
+          <SearchBar handleSearch={this.handleSearch} searchBarValue={ this.state.searchBarValue } resetSearchValue={ this.resetSearchValue }/>
           <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies} searchBarValue={ this.state.searchBarValue } movieSearch={ this.state.movieSearch }/> } />
           <Route exact path="/:id" render={ ({ match }) => {
             return <SelectedMovie selectedMovie={match.params.id}/>
