@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import MovieCard from '../Movie-Card/Movie-Card'
 import './Movie-Container.css'
 
-const MovieContainer = ({ movies, handleClick, movieSearch, searchBarValue}) => {
+const MovieContainer = ({ movies, handleClick, movieSearch, searchBarValue, hideInput }) => {
   let filteredMovies;
   if(searchBarValue !== '' ){
     filteredMovies = movieSearch.map(movie => {
@@ -15,6 +15,7 @@ const MovieContainer = ({ movies, handleClick, movieSearch, searchBarValue}) => 
             id={movie.id}
             poster={movie.poster_path}
             movie={movie}
+            hideInput={hideInput}
           />
           </NavLink>
         </div>
@@ -31,6 +32,7 @@ const MovieContainer = ({ movies, handleClick, movieSearch, searchBarValue}) => 
           id={movie.id}
           poster={movie.poster_path}
           movie={movie}
+          hideInput={hideInput}
         />
         </NavLink>
       </div>

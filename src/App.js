@@ -16,7 +16,8 @@ class App extends Component {
       searchBarValue: '',
       movieSearch: [],
       selectedMovie: '',
-      error: null
+      error: null,
+      inputDisplay: true
     }
   };
 
@@ -25,7 +26,7 @@ class App extends Component {
       if(data.ok) {
         return data.json()
       } else {
-        throw Error(data.error)
+        throw new window.Error('Something happened with the server.')
       }
     })
     .then((response) => {
@@ -45,8 +46,14 @@ class App extends Component {
   }
 
   resetSearchValue = () => {
-    this.setState({ searchBarValue: '' })
+    this.setState({ searchBarValue: '', inputDisplay: true })
   }
+
+  hideInput = () => {
+    this.setState({ inputDisplay: false })
+  }
+
+
 
 
 
@@ -54,8 +61,8 @@ class App extends Component {
 
     return (
         <main className='Movie-Home-Page'>
-          <SearchBar handleSearch={this.handleSearch} searchBarValue={ this.state.searchBarValue } resetSearchValue={ this.resetSearchValue }/>
-          <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies} searchBarValue={ this.state.searchBarValue } movieSearch={ this.state.movieSearch }/> } />
+          <SearchBar handleSearch={this.handleSearch} searchBarValue={ this.state.searchBarValue } resetSearchValue={ this.resetSearchValue } inputDisplay={this.state.inputDisplay} />
+          <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies} searchBarValue={ this.state.searchBarValue } movieSearch={ this.state.movieSearch } hideInput={ this.hideInput }/> } />
           <Route exact path="/:id" render={ ({ match }) => {
             return <SelectedMovie selectedMovie={match.params.id}/>
           }} />
