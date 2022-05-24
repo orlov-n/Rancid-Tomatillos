@@ -36,7 +36,7 @@ class SelectedMovie extends Component{
             <li>movie rating: {(Math.round(this.state.selectedMovie.average_rating * 10) / 10)}</li>
             {this.state.selectedMovie.budget ? <li>budget: ${this.state.selectedMovie.budget}</li> : '' }
             {this.state.selectedMovie.budget ? <li>revenue: ${this.state.selectedMovie.revenue}</li> : '' }
-            <li>genre: {this.state.selectedMovie.genres}</li>
+            <li> {this.state.selectedMovie.genres}</li>
             <li>runtime: {this.state.selectedMovie.runtime} minutes</li>
           </ul>
         </div>
@@ -53,7 +53,7 @@ class SelectedMovie extends Component{
             </div>
           </div>
             <div className="overview">
-              <p>{this.state.selectedMovie.overview}</p>
+              <p class='text-overview'>{this.state.selectedMovie.overview}</p>
             </div>
         </div>
       </article>
