@@ -16,25 +16,19 @@ class App extends Component {
       searchBarValue: '',
       movieSearch: [],
       selectedMovie: '',
-      error: null,
+      errorStatus: false,
+      errorMessage: '',
       inputDisplay: true
     }
   };
 
   componentDidMount = () => {
-      getMovieGallery.then((data) => {
-      if(data.ok) {
-        return data.json()
-      } else {
-        throw new window.Error('Something happened with the server.')
-      }
-    })
+      getMovieGallery
     .then((response) => {
-
       this.setState({movies: response.movies, selectedMovie: ''})
     })
     .catch((err) => {
-      console.log(err)
+      this.setState({ errorMessage: true, error: err })
       })
     }
 
@@ -60,12 +54,15 @@ class App extends Component {
   render() {
 
     return (
+
         <main className='Movie-Home-Page'>
           <SearchBar handleSearch={this.handleSearch} searchBarValue={ this.state.searchBarValue } resetSearchValue={ this.resetSearchValue } inputDisplay={this.state.inputDisplay} />
+
           <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies} searchBarValue={ this.state.searchBarValue } movieSearch={ this.state.movieSearch } hideInput={ this.hideInput }/> } />
           <Route exact path="/:id" render={ ({ match }) => {
-            return <SelectedMovie selectedMovie={match.params.id}/>
+            return <SelectedMovie selectedMovie={match.params.id} />
           }} />
+          {this.state.errorMessage ? <Error errorMessage={this.state.error} /> : ''}
       </main>
 
     )
