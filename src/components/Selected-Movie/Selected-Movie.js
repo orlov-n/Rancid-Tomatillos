@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MovieCard from '../Movie-Card/Movie-Card'
 import './Selected-Movie.css'
-import { getSelectedMovie, getMovieTrailer } from '../../api'
+import { getSelectedMovie, getMovieTrailer, } from '../../api'
 
 class SelectedMovie extends Component{
   constructor(props) {
@@ -42,7 +42,7 @@ class SelectedMovie extends Component{
         </div>
         <div className="movie-info-container">
           <div className='title'>
-          <h2>{this.state.selectedMovie.title} <p className="movie-year">({date})</p></h2> 
+          <h2>{this.state.selectedMovie.title} <p className="movie-year">({date})</p></h2>
 
             <div className="tagline">
               <div className="tagline-text">

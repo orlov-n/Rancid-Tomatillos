@@ -1,10 +1,12 @@
 import React from 'react'
+import './Error.css'
 
-const Error = (props) => {
-
+const Error = ({ errorMessage }) => {
+console.log(errorMessage)
   return (
-    <section>
-      <p>{props}</p>
+
+    <section className='errorBox'>
+      <p>{`${errorMessage}`}</p>
     </section>
   )
 }
