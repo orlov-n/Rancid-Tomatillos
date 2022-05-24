@@ -16,17 +16,29 @@ This was a part of Turing School Software & Design module 3 project.
 ### Using the Application
 
 
+
   * View a Movie's Details - To view a movie's specific detail, a user can click on a specific movie of their choice on the homepage. They will be taken to another page to view the movie's details.
 
-![Show Details of Movie](https://user-images.githubusercontent.com/97068979/169955286-ddb5514a-7d67-49b0-8671-0e2590cdcd2c.gif)
 
+![Details of Movie](https://user-images.githubusercontent.com/97068979/169955689-eed668aa-b2f7-43ae-ae41-8b2974f581ad.gif)
    
   * Play a Movie's Trailer - To play a movie trailer, a user can click on the movie poster on teh ohomepage and then click the play icon located on the video. A user can follow this video to youtube.
+
+![Movie Trailer](https://user-images.githubusercontent.com/97068979/169956339-d09e0d63-c6c2-461f-bf43-61be4af4de93.gif)
+
   * Go Back to the Home Page - To go back to the homepage, a user can click the `Home` button near the top of the page.
+  
+![Home Page](https://user-images.githubusercontent.com/97068979/169956511-b9b80da6-6356-40ee-a569-c6606cdcf10b.gif)
+
+
+
   * Search for a Movie - A user can click the search bar in the upper right hand side of the navigation bar. They can type and it will filter movies that match the value. If no movies are found a message will be displayed to the user.
+
+  ![Search](https://user-images.githubusercontent.com/97068979/169956781-f7fca133-234b-4bc3-9582-c701b2129222.gif)
 
 
 ### Technologies Used 
+
   * React
   * Javascript
   * JSX
@@ -42,6 +54,7 @@ This was a part of Turing School Software & Design module 3 project.
   * [Shane Warning](https://github.com/shanekwarning)
  
 ### Challeneges and Wins
+
 
 #### Challenges
   * First time working with React.
