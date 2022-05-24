@@ -1,8 +1,9 @@
 .poster{
-  height: 33vh;
+  height: 30vh;
   width: 10.3vw;
   border: solid black 3px;
 }
+
 
 .movie-card-title {
   width: 9vw;
@@ -12,7 +13,13 @@
 }
 
 .movie-card {
-  margin-bottom: 1vh;
+  margin-bottom: -4vh;
+  margin-top: 2vh;
   height: 35vh;
   width: 11vw;
+}
+
+.poster:hover {
+ opacity: 63%;
+ border: solid black 4px;
 }
