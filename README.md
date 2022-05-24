@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
+  ### About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Rancid Tomatillos allows the user to browse movies, see movie details and watch their trailers. 
 
-## Available Scripts
+This was a part of Turing School Software & Design module 3 project.
 
-In the project directory, you can run:
+### Getting Started
+ 1. Clone this repo to your location machine from [Here](git@github.com:orlov-n/Rancid-Tomatillos.git)
+ 2. cd into Rancid-Tomatillos
+ 3. Next you will want to run in your command line: `npm install`. You will not want to run npm audit fix.
+ 4. To open the application in your browser you will want to run `npm start`. This will run webpack from your terminal. It should show in your terminal http://localhost:3000/
+ 5. Copy and past http://localhost:3000/ to your webbrowser. Google Chrome may work best. 
+ 6. Once you are done viewing the application you can go back to your terminal to close it. You will want to type Control + C and this will stop webpack from running on your local host. 
 
-### `npm start`
+### Using the Application 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  * View a Movie's Details - To view a movie's specific detail, a user can click on a specific movie of their choice on the homepage. They will be taken to another page to view the movie's details.
+  * Play a Movie's Trailer - To play a movie trailer, a user can click on the movie poster on teh ohomepage and then click the play icon located on the video. A user can follow this video to youtube.
+  * Go Back to the Home Page - To go back to the homepage, a user can click the `Home` button near the top of the page.
+  * Search for a Movie - A user can click the search bar in the upper right hand side of the navigation bar. They can type and it will filter movies that match the value. If no movies are found a message will be displayed to the user.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Technologies Used 
+  * React
+  * Javascript
+  * JSX
+  * CSS
+  * restful APIs
+  * Webpack
+  * React Router
+  * Cypress End to End Testing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Contributors
 
-### `npm run build`
+  * [Nickolai Orlov](https://github.com/orlov-n)
+  * [Shane Warning](https://github.com/shanekwarning)
+  * 
+### Challeneges and Wins
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Challenges
+  * First time working with React.
+  * Getting started with React and how it passing information from one component to another.
+  * Working with Router and using match to help navigate to different URLs and display the correct information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Wins
+  * Learning to be comfortable with React so that we may continue to explore and grow as developers.
+  * Successfully using Router.
+  * Using Cypress.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Project Goals
+  * Gain a foundation with Recat fundamentals.
+  * Using Cypress for End to End testing.
+  * Use OOP to drive design and our coding process.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Future Additions
+  * Allow users to filter by genre.
+  * Display all avaliable trailers.
+  * Clean up data display on movie information page. 
+  * Add the ability for users to login and store data using a API.
+  * Users can add their own ratings.
