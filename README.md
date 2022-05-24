@@ -13,9 +13,14 @@ This was a part of Turing School Software & Design module 3 project.
  5. Copy and past http://localhost:3000/ to your webbrowser. Google Chrome may work best. 
  6. Once you are done viewing the application you can go back to your terminal to close it. You will want to type Control + C and this will stop webpack from running on your local host. 
 
-### Using the Application 
+### Using the Application
+
 
   * View a Movie's Details - To view a movie's specific detail, a user can click on a specific movie of their choice on the homepage. They will be taken to another page to view the movie's details.
+
+![Show Details of Movie](https://user-images.githubusercontent.com/97068979/169955286-ddb5514a-7d67-49b0-8671-0e2590cdcd2c.gif)
+
+   
   * Play a Movie's Trailer - To play a movie trailer, a user can click on the movie poster on teh ohomepage and then click the play icon located on the video. A user can follow this video to youtube.
   * Go Back to the Home Page - To go back to the homepage, a user can click the `Home` button near the top of the page.
   * Search for a Movie - A user can click the search bar in the upper right hand side of the navigation bar. They can type and it will filter movies that match the value. If no movies are found a message will be displayed to the user.
@@ -35,7 +40,7 @@ This was a part of Turing School Software & Design module 3 project.
 
   * [Nickolai Orlov](https://github.com/orlov-n)
   * [Shane Warning](https://github.com/shanekwarning)
-  * 
+ 
 ### Challeneges and Wins
 
 #### Challenges
