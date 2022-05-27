@@ -23,7 +23,11 @@ class SelectedMovie extends Component{
 
  render() {
   let date;
-  this.state.selectedMovie.release_date ? date = this.state.selectedMovie.release_date.slice(0, 4) : date = ''
+  this.state.selectedMovie.release_date ? date = this.state.selectedMovie.release_date.slice(0, 4) : date = '';
+  let genre;
+  this.state.selectedMovie.genres ? genre = this.state.selectedMovie.genres.join(', ') : genre = '';
+  let dollarUSLocale = Intl.NumberFormat('en-US')
+
   return (
     <section className="selected-movie-page" style={{
       backgroundImage: `url(${this.state.selectedMovie.backdrop_path})`
@@ -33,11 +37,11 @@ class SelectedMovie extends Component{
         <div className="poster-container">
           <img className="poster-2" src={this.state.selectedMovie.poster_path}></img>
           <ul className="info-list">
-            <li>movie rating: {(Math.round(this.state.selectedMovie.average_rating * 10) / 10)}</li>
-            {this.state.selectedMovie.budget ? <li>budget: ${this.state.selectedMovie.budget}</li> : '' }
-            {this.state.selectedMovie.budget ? <li>revenue: ${this.state.selectedMovie.revenue}</li> : '' }
-            <li> {this.state.selectedMovie.genres}</li>
-            <li>runtime: {this.state.selectedMovie.runtime} minutes</li>
+            <li>Movie Rating: {(Math.round(this.state.selectedMovie.average_rating * 10) / 10)}</li>
+            {this.state.selectedMovie.budget ? <li>Budget: ${dollarUSLocale.format(this.state.selectedMovie.budget)}</li> : '' }
+            {this.state.selectedMovie.budget ? <li>Revenue: ${dollarUSLocale.format(this.state.selectedMovie.revenue)}</li> : '' }
+            <li> {genre}</li>
+            <li>Runtime: {this.state.selectedMovie.runtime} minutes</li>
           </ul>
         </div>
         <div className="movie-info-container">

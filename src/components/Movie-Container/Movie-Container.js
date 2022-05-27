@@ -44,7 +44,7 @@ const MovieContainer = ({ movies, handleClick, movieSearch, searchBarValue, hide
   if(searchBarValue && movieSearch.length) {
     return filteredMovies
   }else if(searchBarValue && !movieSearch.length) {
-    return <p> Sorry no movies match your search. </p>
+    return <h3 className='no-match'> Sorry no movies match your search. </h3>
   }else{
     return movieInfo
   }
